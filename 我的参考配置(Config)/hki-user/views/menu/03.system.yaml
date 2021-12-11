@@ -1,0 +1,95 @@
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - ../../../hki-base/templates/other/title-text.yaml
+        - name: "&nbsp; 其他"
+      - type: horizontal-stack
+        cards:
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 自动化控制
+              label: Automations
+              icon: mdi:auto-fix
+              navigation_path: /homekit-infused/automations
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 地图定位
+              label: Location
+              icon: mdi:map-marker
+              navigation_path: /homekit-infused/location
+              notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['person.sunyujiao'].state}`; ]]]"
+              background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 日历日程
+              label: Calendar
+              icon: mdi:calendar-check
+              navigation_path: /homekit-infused/calendar
+      - type: horizontal-stack
+        cards:
+          - !include
+            - ../../../hki-base/templates/button/button-badge.yaml
+            - name: 系统状态
+              label: HomeAssistant
+              icon: mdi:home-assistant
+              navigation_path: /homekit-infused/home_assistant_setting
+              notification: "[[[ if (states['sensor.version_current'].state != 0) return `${states['sensor.version_current'].state}`; else return '&nbsp'; ]]]"
+              background_color: "[[[ return 'var(--paper-item-icon-color)'; ]]]"
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 配置面板
+              label: Dashboard
+              icon: mdi:view-dashboard
+              navigation_path: /config/dashboard
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 开发者工具
+              label: Tools
+              icon: mdi:tools
+              navigation_path: /developer-tools/state
+      - type: horizontal-stack
+        cards:
+          - !include
+            - ../../../hki-base/templates/button/button-badge.yaml
+            - name: 主题选项
+              label: Homekit Infused
+              icon: mdi:palette
+              navigation_path: /homekit-infused/homekit_infused_setting
+              notification: "[[[ return '&nbsp'; ]]]"
+              background_color: "[[[ return 'rgba(0,0,0,0.0)'; ]]]"
+          - type: custom:button-card
+            template:
+              - style-default
+              - default-hki-grid
+            name: 关于HKI 
+            size: 25%
+            aspect_ratio: 1/1
+            entity: input_boolean.dummy1
+            label: >
+              [[[ 
+                if (states['sensor.hki_current_version'].state == `${states['sensor.hki_latest_version'].state}`) return `Latest Version`; 
+                if (states['sensor.hki_current_version'].state > `${states['sensor.hki_latest_version'].state}`) return `Beta Version`;
+                if (states['sensor.hki_current_version'].state < `${states['sensor.hki_latest_version'].state}`) return `Update`;
+                else return `Error: Unknown Version!`; 
+              ]]]
+            show_label: true
+            icon: mdi:help-circle
+            tap_action:
+              action: url
+              url_path: 'https://github.com/jimz011/homekit-infused/releases'
+            styles:
+              card:
+                - opacity: 0.8
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 卡片测试
+              label: test
+              icon: mdi:beta
+              navigation_path: /homekit-infused/development

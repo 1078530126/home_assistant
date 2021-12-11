@@ -1,0 +1,86 @@
+- type: custom:mod-card
+  style: |
+    ha-card {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  card:
+    type: vertical-stack
+    cards:
+      - !include
+        - ../../../hki-base/templates/other/title-text.yaml
+        - name: "&nbsp; 状态监测"
+      - type: horizontal-stack
+        cards:
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 家居平面图
+              label: Floorplan
+              icon: mdi:floor-plan
+              navigation_path: /homekit-infused/floorplan
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: Plex影库
+              label: DS3615xs
+              icon: mdi:plex
+              navigation_path: /homekit-infused/plex
+              notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['sensor.plex_ds3615xs'].state} `; ]]]"
+              background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 查找定位
+              label: Find_My
+              icon: mdi:map-search
+              navigation_path: /homekit-infused/find_my
+      - type: horizontal-stack
+        cards:
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 设备电量
+              label: Battery
+              icon: mdi:battery-charging-high
+              navigation_path: /homekit-infused/battery
+              notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['sensor.jinri_dianliang'].state} kWh`; ]]]"
+              background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 天气信息
+              label: Weather
+              icon: mdi:weather-partly-cloudy
+              navigation_path: /homekit-infused/weather
+              notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['weather.home'].state}`; ]]]"
+              background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 交通路况
+              label: Traffic
+              icon: mdi:traffic-light
+              navigation_path: /homekit-infused/traffic
+              notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['sensor.traffic_home_to_office'].state} min`; ]]]"
+              background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"
+      - type: horizontal-stack
+        cards:
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 服务器状态
+              label: Server
+              icon: mdi:desktop-tower
+              navigation_path: /homekit-infused/server_status
+              notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['sensor.hp_ilo_cpu_fanspeed'].state}%`; ]]]"
+              background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 网络状态
+              label: Network
+              icon: mdi:wan
+              navigation_path: /homekit-infused/network_status
+              notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['sensor.mikrotik_wan_rx'].state} Mb/s`; ]]]"
+              background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"
+          - !include
+            - "../../../hki-base/templates/button/button-badge.yaml"
+            - name: 能耗信息
+              label: Energy
+              icon: mdi:chart-line
+              navigation_path: /homekit-infused/energy
+              notification: "[[[ if (states['input_number.empty'].state == 0) return '&nbsp'; else return `${states['sensor.gonglv'].state} W`; ]]]"
+              background_color: "[[[ if (states['input_number.empty'].state == 0) return 'rgba(0,0,0,0.0)'; else return 'var(--paper-item-icon-color)'; ]]]"
