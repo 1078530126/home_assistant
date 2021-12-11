@@ -13,7 +13,7 @@
 
 **用户界面配置(Lovelace&Frontend)**：Lovelace界面相关的一些配置参考代码；
 
-**我的参考配置(Config)：**我的配置文件示例。
+**我的参考配置(Config)**：我的配置文件示例。
 
 
 
@@ -80,7 +80,8 @@
 ## 部分配置（待整理和上传）
 
 
-#### 详细的配置参考和效果:https://github.com/Potato501/homeassistant_config/tree/main/hki-user/views 
+#### 卡片配置参考:
+https://github.com/Potato501/home_assistant/tree/Potato/%E6%88%91%E7%9A%84%E5%8F%82%E8%80%83%E9%85%8D%E7%BD%AE(Config)/hki-user/views
 
 ![image-20210914134607529-16315985219341](README.assets/image-20210914134607529-16315985219341.png)
 
