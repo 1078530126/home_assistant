@@ -45,13 +45,13 @@
 - **插件说明: https://jimz011.github.io/homekit-infused/addons.html**
 
 
-####  作者配置
+####  3.1.1、 作者配置
 
 
 作者配置仓库地址：https://github.com/jimz011/homekit-infused/tree/4.x.x-personal
 
 
-####  示例效果
+####  3.1.2、 示例效果
 
 
 #####  房间导航：
@@ -68,7 +68,7 @@
 
 
 
-####  配置参考（待整理和上传）
+####  3.1.3、 配置参考（待整理和上传）
 
 
  - 自定义卡片配置参考（此部分可能不适用于新版的HKI2021.12.x版本了，暂时留着）:
@@ -79,16 +79,17 @@ https://github.com/Potato501/home_assistant/tree/Potato/Config/hki-user/views
 
 https://github.com/Potato501/home_assistant/blob/Potato/Config/hki-user/config/view_config.yaml
 
+####  3.1.4、 视频效果
 
 
-**感谢JIMZ011大佬构建了一个这么漂亮的Lovelace框架，同时也感谢Home Assistant开源社区大神们带给我们各种好玩的插件和玩法。**
-
-录了2个效果视频，地址：
+录了2个效果视频：
 
 https://www.bilibili.com/video/BV1uF411z7rg
 
 
 https://www.bilibili.com/video/BV1YP4y137zz
+
+**感谢JIMZ011大佬构建了一个这么漂亮的Lovelace框架，同时也感谢Home Assistant开源社区大神们带给我们各种好玩的插件和玩法。**
 
 
 ### 3.2、Mattias Persson大神的界面主题
