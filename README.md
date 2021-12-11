@@ -6,14 +6,13 @@
 
 ---
 
-**配置说明文档(Documents&Notes)**：说明文档&笔记&教程；
+**Documents&Notes**：说明文档&笔记&教程；
 
-**设备接入集成(Integrations)**：我自己用到的一些设备接入相关的配置；
+**Integrations**：我自己用到的一些设备接入相关的配置；
 
+**Lovelace&Frontend**：Lovelace界面相关的一些配置参考代码；
 
-**用户界面配置(Lovelace&Frontend)**：Lovelace界面相关的一些配置参考代码；
-
-**我的参考配置(Config)**：我的配置文件示例。
+**Config**：我的配置文件示例。
 
 
 
@@ -24,9 +23,9 @@
 
  - Home Assistant、Lovelace插件还有Homekit Infused以及其他的主题框架本身也都在更新，所有的教程和配置代码均有很强的实效性，仅作参考。
 
- - 个人能力所限，配置代码也是瞎拼凑的，仅仅是抛砖引玉，希望有愿意分享的真正的大佬给我们分享更多的玩法。
+ - **个人能力所限，配置代码也是瞎拼凑的，仅仅是抛砖引玉**，希望有愿意分享的真正的大佬给我们分享更多的玩法。
 
-- 本仓库主要分享我自己在玩HomeAssistant界面过程中、个人觉得好玩的界面框架及插件相关，顺便放上自己的示例配置，玩Homekit Infused主题框架比较多，目前我在使用的版本是**2021.11.1**，最新版暂时没有时间尝试和测试。
+- 玩Homekit Infused主题框架比较多，目前我在使用的版本是**2021.11.1**，最新版暂时没有时间尝试和测试。
 
 
 
@@ -56,19 +55,19 @@
 
 #### 房间导航
 
-![IMG_0779](README.assets/IMG_0779.PNG)
+![IMG_0779](Screenshot/IMG_0779.PNG)
 
 #### 媒体控制
 
-![IMG_0784](README.assets/IMG_0784.PNG)
+![IMG_0784](Screenshot/IMG_0784.PNG)
 
 #### 状态监测
 
-![IMG_0792](README.assets/IMG_0792.PNG)
+![IMG_0792](Screenshot/IMG_0792.PNG)
 
 #### 能耗统计
 
-![IMG_0794](README.assets/IMG_0794.PNG)
+![IMG_0794](Screenshot/IMG_0794.PNG)
 
 
 
@@ -83,7 +82,7 @@
 #### 卡片配置参考:
 https://github.com/Potato501/home_assistant/tree/Potato/%E6%88%91%E7%9A%84%E5%8F%82%E8%80%83%E9%85%8D%E7%BD%AE(Config)/hki-user/views
 
-![image-20210914134607529-16315985219341](README.assets/image-20210914134607529-16315985219341.png)
+![image-20210914134607529-16315985219341](Screenshot/image-20210914134607529-16315985219341.png)
 
 ---
 
